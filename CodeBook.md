@@ -1,17 +1,17 @@
 # Human Activity Measurement
 
-Variable|Description
---------|------------
-ActivityID|
-Activity|
-SubjectID|
-Variable|
-value|
-STATS|
-Mode|
-AccelerationSignal|
-Type|
-SignalDerivedTime|
+Variable Name|Description
+-------------|------------
+ActivityID| Activity Identification Number
+Activity| Activity Name
+SubjectID| Subject Identification Number
+Variable| Unique Code for Each Variable
+value| Measurement Units
+STATS| Results of the Statistical Method Applied to the Raw Measurement of Each of the Unique Variable
+Mode|Method used for Each Variable
+AccelerationSignal| Origin of the Acceleration Signal Obtained
+Type| Type of Acceleration Signal, either from Gyroscope or time
+SignalDerivedTime| Method Used to Derived Signal in Time
 
 #"Instructions
 
