@@ -40,5 +40,8 @@ About the R script resulted in this project
 3. After downloading, unzip the file and move the folder "UCI HAR Dataset" into your working directory
 4. Then run the r_analysis.R. Two tables (.txt files) will be saved in your working directory:  1) a text file containing all measurements with descriptive variables names (HumanActivityMeasure.txt), 2) an independent text file containing a summarized data based on the average of each variable for each activity for each subject (Summarised_HumActMea.txt)
 
+End
+
+
 
 
