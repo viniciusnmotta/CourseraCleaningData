@@ -43,7 +43,7 @@ You should create one R script called run_analysis.R that does the following.
 
 Good luck!"
 
-##About the R script resulted in this project
+## About the R script resulted from this project
 
 1. The final R script that cleans the data and makes a tidy new file is called: run_analysis.R
 2. To be able to run this script, you will need to download the zip file from the link: "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
