@@ -48,7 +48,7 @@ Good luck!"
 1. The final R script that cleans the data and makes a tidy new file is called: run_analysis.R
 2. To be able to run this script, you will need to download the zip file from the link: "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
 3. After downloading, unzip the file and move the folder "UCI HAR Dataset" into your working directory
-4. Then run the r_analysis.R. Two tables (.txt files) will be saved in your working directory:  1) a text file containing all measurements with descriptive variables names (HumanActivityMeasure.txt), 2) an independent text file containing a summarized data set with the average of each variable for each activity for each subject (Summarised_HumActMea.txt)
+4. Then run the r_analysis.R. One tables (.txt files) will be saved in your working directory:  1) a text file containing all measurements with descriptive variables names and the counts and the average of each variable for each activity for each subject (HumanActivityMeasure.txt).
 
 #End
 
