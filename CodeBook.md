@@ -13,11 +13,14 @@ AccelerationSignal| Origin of the Acceleration Signal Obtained
 Type| Type of Acceleration Signal, either from Gyroscope or time
 SignalDerivedTime| Method Used to Derived Signal in Time
 
-#"Variables details
+#Variables details
 Activity ID 
+
   ranges from 1 to 6
+  
 Activity
   Names of activity
+  
   1. WALKING
   2. WALKING_UPSTAIRS
   3. WALKING_DOWNSTAIRS
