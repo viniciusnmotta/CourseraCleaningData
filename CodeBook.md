@@ -14,11 +14,11 @@ Type| Type of Acceleration Signal, either from Gyroscope or time
 SignalDerivedTime| Method Used to Derived Signal in Time
 
 #Variables details
-Activity ID 
+ #Activity ID 
 
   ranges from 1 to 6
   
-Activity
+ #Activity
   Names of activity
   
   1. WALKING
