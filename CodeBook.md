@@ -1,4 +1,7 @@
 # Human Activity Measurement
+The data set results from manipulation and analysis of data sets obtained originally from the link:https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
+
+Information on the the data set can be found in this document as shown bellow:
 
 Variable Name|Description
 -------------|------------
@@ -14,21 +17,19 @@ Type| Type of Acceleration Signal, either from Gyroscope or time
 SignalDerivedTime| Method Used to Derived Signal in Time
 
 #Variables details
- #Activity ID 
-
-  ranges from 1 to 6
+ Activity ID: ranges from 1 to 6
   
- #Activity
-  Names of activity
-  
+ Activity - Names of activity
   1. WALKING
   2. WALKING_UPSTAIRS
   3. WALKING_DOWNSTAIRS
   4. SITTING
   5. STANDING
   6. LAYING
+  
+Subject ID: ranges from 1 to 30
 
-The purpose of this project is to demonstrate your ability to collect, work with, and clean a data set.
+
 
 #Review criteria
 
