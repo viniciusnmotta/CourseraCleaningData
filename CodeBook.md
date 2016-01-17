@@ -9,74 +9,54 @@ ActivityID| Activity Identification Number
 Activity| Activity Name
 SubjectID| Subject Identification Number
 Variable| Unique Code for Each Variable
-value| Measurement Units
-STATS| Results of the Statistical Method Applied to the Raw Measurement of Each of the Unique Variable
+STATS| Statistical Method Applied to the Raw Measurements of Each Unique Variable
 Mode|Method used for Each Variable
 AccelerationSignal| Origin of the Acceleration Signal Obtained
 Type| Type of Acceleration Signal, either from Gyroscope or time
+AxialSignal| one of the 3-axial raw signals
 SignalDerivedTime| Method Used to Derived Signal in Time
+count|Number of measures for each variable
+mean|Average of the mean or standard deviation transformed measures for each variable, for each activity and for each individual
 
 #Variables details
- Activity ID: ranges from 1 to 6
+Activity ID: ranges from 1 to 6
   
- Activity - Names of activity
-  1. WALKING
-  2. WALKING_UPSTAIRS
-  3. WALKING_DOWNSTAIRS
-  4. SITTING
-  5. STANDING
-  6. LAYING
+Activity: Names of the activities: WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING,LAYING
   
 Subject ID: ranges from 1 to 30
 
+Variables: complex code names derived from abreviations of multiple parameters names
+
+Value: Units of time domain signals.
+
+STATS: statistical method applied to the raw data to generate the values
+
+Mode: Time (time domain signals captured at a constant rate of 50 Hz); FastFurier (Fast Fourier Transform (FFT) of time domain signals)
+
+AccelerationSignal: Body (body linear acceleration) or Gravity (angular velocity)
+
+Type: Information obtained from the Accelerometer or the Gyroscope
+
+AxialSignal: 3-axial raw signals: X, Y or Z
+
+SignalDerivedTime: Jerk (the body linear acceleration and angular velocity were derived in time to obtain Jerk signals); JerkMagnitude or Magnitude (the magnitude of three-dimensional signals were calculated using the Euclidean norm)
 
 
-#Review criteria
+#Steps to produce the tidy dataset
+(detailed information is embeded in the run_analysis.R script)
 
-1.The submitted data set is tidy.
+1.The original dataset consisted of 3 tables for the test subject group, 3 tables for the train subject group, 1 table with activity labels and 1 table with the features labels 
 
-2.The Github repo contains the required scripts.
+2.The 3 tables for each group (test and train) were combined separately. Then, they were merged together into a single data table.
 
-3.GitHub contains a code book that modifies and updates the available codebooks with the data to indicate all the variables and summaries calculated, along with units, and any other relevant information.
+3.Columns for mean and standard deviations were selected. 
 
-4.The README that explains the analysis files is clear and understandable.
+4.All variable columns were compiled into a single column called Variable and their values into a new column called Value
 
-5.The work submitted for this project is the work of the student who submitted it.
+5.New columns were created for each parameter used to define each variable.
 
-#Getting and Cleaning Data Course Project
+6.A final data set was created independently with the average of each variable for each activity and each subject.
 
-The purpose of this project is to demonstrate your ability to collect, work with, and clean a data set. The goal is to prepare tidy data that can be used for later analysis. You will be graded by your peers on a series of yes/no questions related to the project. You will be required to submit: 1) a tidy data set as described below, 2) a link to a Github repository with your script for performing the analysis, and 3) a code book that describes the variables, the data, and any transformations or work that you performed to clean up the data called CodeBook.md. You should also include a README.md in the repo with your scripts. This repo explains how all of the scripts work and how they are connected.
-
-One of the most exciting areas in all of data science right now is wearable computing - see for example this article . Companies like Fitbit, Nike, and Jawbone Up are racing to develop the most advanced algorithms to attract new users. The data linked to from the course website represent data collected from the accelerometers from the Samsung Galaxy S smartphone. A full description is available at the site where the data was obtained:
-
-http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
-
-Here are the data for the project:
-
-https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
-
-You should create one R script called run_analysis.R that does the following.
-
-1.Merges the training and the test sets to create one data set.
-
-2.Extracts only the measurements on the mean and standard deviation for each measurement.
-
-3.Uses descriptive activity names to name the activities in the data set
-
-4.Appropriately labels the data set with descriptive variable names.
-
-5.From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
-
-Good luck!"
-
-## About the R script resulted from this project
-
-1. The final R script that cleans the data and makes a tidy new file is called: run_analysis.R
-2. To be able to run this script, you will need to download the zip file from the link: "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
-3. After downloading, unzip the file and move the folder "UCI HAR Dataset" into your working directory
-4. Then run the r_analysis.R. Two tables (.txt files) will be saved in your working directory:  1) a text file containing all measurements with descriptive variables names (HumanActivityMeasure.txt), 2) an independent text file containing a summarized data set with the average of each variable for each activity for each subject (Summarised_HumActMea.txt)
-
-#End
 
 
 

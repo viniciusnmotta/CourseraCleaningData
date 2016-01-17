@@ -102,7 +102,7 @@ df$SignalDerivedTime<-ifelse(grepl("Jerk-",df$Variable),"Jerk",
                   ifelse(grepl("JerkMag-",df$Variable),"JerkMagnitude",
                          ifelse(grepl("Mag-",df$Variable),"Magnitude",NA)))
 
-write.table(df,file="HumanActivityMeasure.txt",sep="\t",row.names = FALSE)
+#write.table(df,file="RawHumanActivityMeasure.txt",sep="\t",row.names = FALSE)
 
 ###################################################################################################
 ###################################################################################################
@@ -112,15 +112,9 @@ write.table(df,file="HumanActivityMeasure.txt",sep="\t",row.names = FALSE)
 ##' for each subject 
 ###################################################################################################
 require(dplyr)
-newtidy<-group_by(df,SubjectID,Activity,Variable)
+newtidy<-group_by(df,ActivityID,Activity,SubjectID,Variable,STATS,Mode,AccelerationSignal,Type,AxialSignal,SignalDerivedTime)
 newtidy<-summarise(newtidy,count=n(),mean=mean(value))
 newtidy<-data.frame(newtidy)
-write.table(newtidy,file="Summarised_HumActMea.txt",sep="\t",row.names = FALSE)
+write.table(newtidy,file="HumanActvityMeasure.txt",sep="\t",row.names = FALSE)
 
 
-#temp
-t<-names(df)
-newtidy2<-group_by(df,ActivityID,Activity,SubjectID,Variable,STATS,Mode,AccelerationSignal,Type,SignalDerivedTime,AxialSignal)
-newtidy2<-summarise(newtidy2,count=n(),mean=mean(value))
-newtidy2<-data.frame(newtidy2)
-write.table(newtidy,file="Summarised_HumActMea.txt",sep="\t",row.names = FALSE)
